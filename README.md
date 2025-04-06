@@ -1,5 +1,5 @@
-# Pyst-it <img src="Images/iconicon.png" alt="Ícone" width="40"> (Beta 0.9.1)
-A simple sticky notes app.
+# Workote <img src="Images/iconicon.png" alt="Ícone" width="40"> (Beta 0.9.1)
+A modern looking sticky notes app.
 
 <p align="center">
   <img src="Images/logo.png" alt="Imagem">
