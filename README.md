@@ -25,7 +25,7 @@ Where work meets notes
 
 ---
 
-📌 Pin Notes: Keep important notes always on top of other windows — perfect for reminders while you work.
+📌 Pin Notes: Keep important notes always on top — perfect for reminders while you work.
 
 ---
 
