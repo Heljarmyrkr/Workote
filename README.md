@@ -62,13 +62,8 @@ Start to use it now! 🚀
 
 ---
 
-Full 1.0 version coming soon!<br>
-**Planned Features for Version 1.0:**
-🔔 **Reminders & Notifications**: Set reminders to never forget your important tasks—get notified to check or save your notes whenever you need a prompt.<br>
-<br>
-**Contact and Contributions**:<br>
-🤝 **Contribute**: Help me improve "Workote"! Fork the repo, make changes, and submit a pull request.<br>
-📧 **Contact:** If you have any questions or feedback, reach out at [kauarodr2005@gmail.com].<br>
+🤝 **Contribute**: Want to make Workote even better? Feel free to fork the repository, suggest improvements, or open a pull request. Every contribution is welcome!<br>
+📧 **Contact**: Got questions, ideas, or feedback? Drop me a message at kauarodr2005@gmail.com — I’d love to hear from you.<br>
 
 ---
 
