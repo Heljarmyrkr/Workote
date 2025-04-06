@@ -1,4 +1,4 @@
-# Workote <img src="Images/iconicon.png" alt="Ícone" width="40"> (Beta 0.9.1)
+# Workote <img src="Images/iconicon.png" alt="Ícone" width="40">
 A modern looking sticky notes app.
 
 <p align="center">
