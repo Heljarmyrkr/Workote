@@ -33,6 +33,10 @@ Where work meets notes
 
 ---
 
+🔔 **Reminders & Notifications**: Set reminders to never forget your important tasks—get notified to check or save your notes whenever you need a prompt.
+
+---
+
 🌈 **Colors**: Choose between 8 colors<br>
 <p align="center">
   <img src="Images/colors.png" alt="Imagem">
