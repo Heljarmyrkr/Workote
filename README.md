@@ -9,7 +9,7 @@ Where work meets notes
 
 🖥️ **Interface**: Minimalist and simple.<br>
 <div align="center">
-  <img src="gifs/pystit.gif" alt="pyst-it">
+  <img src="gifs/pic1.jpeg" alt="pyst-it">
 </div>
 
 ---
