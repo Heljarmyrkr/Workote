@@ -16,7 +16,7 @@ Where work meets notes
 
 ✨ **Multiple Notes**: Simple and intuive way to organize your notes<br>
 <div align="center">
-  <img src="gifs/multiplenotes.gif" alt="multiplenotes">
+  <img src="Images/pic1.png" alt="multiplenotes">
 </div>
 
 ---
