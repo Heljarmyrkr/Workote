@@ -2,7 +2,7 @@
 Where work meets notes
 
 <p align="center">
-  <img src="Images/logo.png" alt="Imagem">
+  <img src="Images/logo.png" alt="Imagem" width="400">
 </p>
 
 ---
