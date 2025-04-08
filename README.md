@@ -9,7 +9,7 @@ Where work meets notes
 
 🖥️ **Interface**: Minimalist and simple.<br>
 <div align="center">
-  <img src="Images/pic2.png" alt="workote" width="150">
+  <img src="Images/pic2.png" alt="workote" width="250">
 </div>
 
 ---
