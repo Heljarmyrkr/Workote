@@ -22,7 +22,9 @@ Where work meets notes
 ---
 
 💾 Easy Saving: Notes saved can be reopened anytime with just one click. Simple, fast, and reliable.
-
+<div align="center">
+  <img src="Images/video1.mp4" alt="saving">
+</div>
 ---
 
 📌 Pin Notes: Keep important notes always on top — perfect for reminders while you work.
