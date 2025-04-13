@@ -23,7 +23,7 @@ Where work meets notes
 
 💾 Easy Saving: Notes saved can be reopened anytime with just one click. Simple, fast, and reliable.
 <div align="center">
-  <img src="Images/video1.mp4" alt="saving">
+  <img src="Images/video1.gif" alt="saving">
 </div>
 ---
 
