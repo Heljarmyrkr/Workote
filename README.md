@@ -25,6 +25,7 @@ Where work meets notes
 <div align="center">
   <img src="Images/video1.gif" alt="saving" width="600">
 </div>
+
 ---
 
 📌 Pin Notes: Keep important notes always on top — perfect for reminders while you work.
