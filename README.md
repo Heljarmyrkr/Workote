@@ -36,6 +36,9 @@ Where work meets notes
 ---
 
 🖼️ Image Support: Add images to your notes effortlessly — even by dragging and dropping directly into them. Perfect for visual reminders, moodboards, or quick sketches.
+<div align="center">
+  <img src="Images/video2.gif" alt="imagesupport" width="600">
+</div>
 
 ---
 
