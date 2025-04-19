@@ -55,7 +55,7 @@ Where work meets notes
 
 🌈 **Colors**: Choose between 8 colors<br>
 <p align="center">
-  <img src="Images/colors.png" alt="Imagem">
+  <img src="Images/pic7.png" alt="Imagem">
 </p>
 
 ---
