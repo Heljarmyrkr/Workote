@@ -44,11 +44,11 @@ Where work meets notes
 
 🔔 **Reminders & Notifications**: Set reminders to never forget your important tasks—get notified to check or save your notes whenever you need a prompt.
 <div align="center">
-  <img src="Images/pic5.png" alt="notification1" width="600">
+  <img src="Images/pic5.png" alt="notification1" width="200">
 </div>
 
 <div align="center">
-  <img src="Images/pic5.png" alt="notification2" width="600">
+  <img src="Images/pic6.png" alt="notification2" width="200">
 </div>
 
 ---
