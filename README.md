@@ -60,17 +60,9 @@ Where work meets notes
 
 ---
 
-
-
-
----
-
 🔄 Version 1.0
 
 Start to use it now! 🚀
-<p align="center">
-  <img src="Images/pic1.png" alt="Imagem">
-</p>
 
 | **Downloads** | **🪟 For Windows** |
 |:-------------:|:---------------:|
