@@ -1,0 +1,44 @@
+{
+  "name": "workote",
+  "productName": "Workote",
+  "version": "1.0.0",
+  "main": "src/main.js",
+  "description": "A modern sticky note app!",
+  "author": "Kauã Rodrigues Dada",
+  "license": "MIT",
+  "keywords": ["notas", "sticky notes", "electron", "productivity"],
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^24.13.3"
+  },
+  "dependencies": {
+    "node-schedule": "^2.1.1"
+  },
+  "build": {
+    "appId": "com.kaua.workote",
+    "productName": "Workote",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Workote"
+    }
+  }
+}

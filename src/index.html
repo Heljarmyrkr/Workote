@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workote</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="toolbar">
+        <div class="toolbar-left">
+            <button id="new">
+                <img src="icons/new.png" alt="New">
+            </button>
+        </div>
+        <div class="toolbar-right">
+            <button id="minimize">
+                <img src="icons/minimize.png" alt="Minimize">
+            </button>
+            <button id="close">
+                <img src="icons/close.png" alt="Close">
+            </button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search for notes">
+            <button id="clear-search">
+                <img src="icons/clear.png" alt="Limpar">
+            </button>
+        </div>
+        <div id="note-list">
+            <!-- Note cards will be added here -->
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="note.css">
+    <title>Workote - Note</title>
+</head>
+<body>
+
+    <div class="toolbar" id="toolbar">
+        <div class="left-buttons">
+            <button id="open-new-note">
+                <img src="icons/new.png" alt="New Note">
+            </button>
+            <button id="save-note">
+                <img src="icons/save.png" alt="Save">
+            </button>
+        </div>
+        <button id="minimize-note">
+            <img src="icons/minimize.png" alt="Minimize">
+        </button>
+        <div class="close-container">
+            <button id="close-note">
+                <img src="icons/close.png" alt="Close">
+            </button>
+            <div class="close-menu" id="closeMenu">
+                <div class="close-menu-item" id="return-to-list">Return to list</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <!-- Replace textarea with a contentEditable div -->
+        <div class="text-area" id="textArea" contenteditable="true" spellcheck="false" 
+        placeholder="Type your note here..."></div>
+        </div>
+
+        <div class="bottom-toolbar">
+        <button id="theme">
+            <img src="icons/theme.png" alt="Theme">
+        </button>
+    </div>
+
+    <div class="theme-menu" id="themeMenu"></div>
+
+    <!-- Save Feedback Message -->
+    <div class="save-feedback" id="saveFeedback">Note saved!</div>
+
+    <script src="note-renderer.js"></script>
+</body>
+</html>

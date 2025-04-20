@@ -1,0 +1,413 @@
+:root {
+    --toolbar-color: #080808;
+    --hover-bg: #0a0a0a86;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+.toolbar, .bottom-toolbar {
+    position: fixed;
+    background-color: var(--toolbar-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    width: 100%;
+    gap: 1px;
+    -webkit-app-region: drag;
+}
+
+
+.toolbar {
+    top: 0;
+    justify-content: flex-start;
+    z-index: 100;
+}
+
+
+.bottom-toolbar {
+    bottom: 0;
+    justify-content: flex-start;
+    padding-left: 10px;
+    transform: translateY(100%); /* Hidden by default */
+    transition: transform 0.3s ease;
+    z-index: 100;
+}
+
+.bottom-toolbar.visible {
+    transform: translateY(0); /* Show the toolbar */
+}
+
+.bottom-toolbar button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+.toolbar button, .bottom-toolbar button {
+    background: none;
+    color: white;
+    border: none;
+    padding: 3px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: 'Dubai Medium', sans-serif;
+    font-size: 15px;
+    -webkit-app-region: no-drag;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+.toolbar button img {
+    width: 18px;
+    height: 18px;
+}
+
+.left-buttons {
+    display: flex;
+    margin-right: auto;
+    margin-left: 5px;
+    gap: 5px;
+}
+
+.toolbar button:hover, 
+.bottom-toolbar button:hover {
+    background-color: var(--hover-bg);
+}
+
+
+.content {
+    height: calc(100vh - 35px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 35px;
+    position: relative;
+}
+
+
+.text-area[contenteditable="true"] {
+    width: 95%;
+    height: 95%;
+    border: none;
+    outline: none;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 16px;
+    background-color: transparent;
+    color: inherit;
+    padding: 10px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* Style for the placeholder text */
+.text-area[contenteditable="true"]:empty:before {
+    content: attr(placeholder);
+    color: gray;
+    pointer-events: none;
+    display: block;
+}
+
+/* Style for images within the text area */
+.text-area img {
+    max-width: 90%;
+    height: auto;
+    margin: 10px auto;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.text-area img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Hide the separate image container as we don't need it anymore */
+.image-container {
+    display: none;
+}
+
+/* Style for selected images */
+.text-area img.selected {
+    outline: 2px solid #4b96ff;
+}
+
+/* Add highlighting for drag and drop area */
+.content.highlight .text-area {
+    border: 2px dashed #4b96ff;
+    background-color: rgba(75, 150, 255, 0.1);
+}
+
+.text-area::-webkit-scrollbar {
+    width: 8px;
+}
+
+.text-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.text-area::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.text-area::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.save-feedback {
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.save-feedback.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.theme-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+    flex-shrink: 0; /* Impede que os elementos encolham */
+    flex-grow: 0; /* Impede que os elementos cresçam */
+    min-width: 30px; /* Garante um tamanho mínimo */
+    min-height: 30px; /* Garante um tamanho mínimo */
+}
+
+/* Adicione também essa classe para garantir que o contêiner dos temas seja responsivo */
+.theme-menu {
+    position: fixed;
+    bottom: 35px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(30, 30, 30, 0.9);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 99;
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+    flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha se necessário */
+    align-items: center; /* Centraliza verticalmente */
+}
+
+.theme-menu.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.theme-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    border: 2px solid transparent;
+}
+
+.theme-option:hover {
+    transform: scale(1.1);
+}
+
+.theme-option.active {
+    border: 2px solid white;
+}
+
+.close-container {
+    position: relative;
+    display: inline-block;
+}
+
+.close-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: var(--toolbar-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0.2s;
+    z-index: 101;
+    overflow: hidden;
+    width: 120px;
+}
+
+.close-container:hover .close-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.close-menu-item {
+    padding: 10px 15px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.close-menu-item:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Estilos para o contêiner de imagens */
+.image-container {
+    display: none;
+}
+
+.image-container.visible {
+    display: flex;
+}
+
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+}
+
+.embedded-image {
+    max-width: 90%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.embedded-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pasted-image {
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.delete-image-btn {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    opacity: 0; /* Alterado de 0 para 1 para sempre ser visível */
+    transition: opacity 0.2s;
+    z-index: 1000; /* Adicionado para garantir que esteja acima de outros elementos */
+}
+
+.image-wrapper:hover .delete-image-btn {
+    opacity: 1;
+}
+
+
+
+.delete-image-btn:hover {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+
+.preview-mode .delete-image-btn {
+    display: none !important;
+}
+
+#format-bold, #format-italic, #format-bullet, #format-checkbox {
+    font-size: 16px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #080808;
+}
+
+/* Styling for lists */
+.text-area ul {
+    padding-left: 25px;
+    margin: 5px 0;
+}
+
+.text-area ul.task-list {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+.text-area ul.task-list li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.text-area ul.task-list li input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Style for completed tasks */
+.text-area ul.task-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+/* Improve the overall formatting experience */
+.text-area b, .text-area strong {
+    font-weight: bold;
+}
+
+.text-area i, .text-area em {
+    font-style: italic;
+}
+
+/* Make checkbox clicks not trigger contenteditable events */
+.text-area input[type="checkbox"] {
+    pointer-events: auto;
+}
+
+
