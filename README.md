@@ -66,7 +66,7 @@ Start to use it now! 🚀
 
 | **Downloads** | **🪟 For Windows** |
 |:-------------:|:---------------:|
-| ![Beta v0.9](https://badgen.net/badge/version/Beta%20v0.9/green) | [⬇️ Download](https://github.com/Heljarmyrkr/Pyst-it/releases/download/v0.9-beta/Pyst-it.exe) |
+| ![Full v1.0](https://badgen.net/badge/version/Stable%20v1.0/green) | [⬇️ Download](https://github.com/Heljarmyrkr/Workote/releases/download/Workote_stable_releases/Workote.Setup.1.0.exe) |
 
 ---
 
